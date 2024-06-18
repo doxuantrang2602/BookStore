@@ -26,3 +26,38 @@ function updateSubtotal() {
     });
     document.querySelector('.subtotal').innerText = subtotal.toLocaleString('vi-VN');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cartItems = document.querySelectorAll('.cart-item');
+
+    cartItems.forEach(function(cartItem) {
+        const quantityElement = cartItem.querySelector('.quantity');
+        const price = parseFloat(cartItem.getAttribute('data-price'));
+
+        const btnPlus = cartItem.querySelector('.btn-plus');
+        const btnMinus = cartItem.querySelector('.btn-minus');
+        const btnRemove = cartItem.querySelector('.btn-remove');
+
+        // Xử lý sự kiện khi nhấn nút +
+        btnPlus.addEventListener('click', function() {
+            let quantity = parseInt(quantityElement.textContent);
+            quantity++;
+            quantityElement.textContent = quantity;
+            updateSubtotal();
+        });
+
+        // Xử lý sự kiện khi nhấn nút -
+        btnMinus.addEventListener('click', function() {
+            let quantity = parseInt(quantityElement.textContent);
+            if (quantity > 1) {
+                quantity--;
+                quantityElement.textContent = quantity;
+                updateSubtotal();
+            }
+        });
+        btnRemove.addEventListener('click', function() {
+            cartItem.remove();
+            updateSubtotal();
+        });
+    });
+});

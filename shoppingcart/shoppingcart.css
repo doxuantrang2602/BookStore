@@ -144,3 +144,31 @@ footer {
     margin-left: 10px;
     font-size: 18px;
 }
+
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-quantity {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-quantity:hover {
+    background-color: #999;
+}
+
+.btn-quantity.btn-minus {
+    margin-right: 5px;
+}
+
+.btn-quantity.btn-plus {
+    margin-left: 5px;
+}
