@@ -33,6 +33,3 @@ function last() {
     document.getElementById("anh").src = khoAnh[index].src;
 }
 setInterval("next()", 3000);
-
-
-

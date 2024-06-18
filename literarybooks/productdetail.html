@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="/nav.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="productdetail.js" defer></script>
 </head>
 
 <body>
@@ -39,29 +41,29 @@
                     <a href="/signup/signup.html"><img src="img/user.png" alt=""></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/cart.png" alt=""></a>
+                    <a href="/shoppingcart/shoppingcart.html"><img src="img/cart.png" alt=""></a>
                 </div>
             </div>
         </header>
         <main>
             <div class="top">
-                <a href="trangchu.html"><i class="fa-solid fa-house-chimney"></i> Trang Chủ /</a>
-                <a href="product.html">Sách Văn Học /</a>
+                <a href="/home/home.html"><i class="fa-solid fa-house-chimney"></i> Trang Chủ /</a>
+                <a href="/literarybooks/product.html">Sách Văn Học /</a>
                 <a href="#">Chi tiết tác phẩm</a>
             </div>
             <div class="chitiet">
                 <div class="box-left">
-                    <img src="img/book_3.jpg" alt="Số đỏ">
+                    <img id="product-img" src="img/book_3.jpg" alt="Số đỏ">
                 </div>
                 <div class="box-right">
-                    <h3>Số đỏ - Vũ Trọng Phụng</h3>
-                    <h4>130.000 ₫</h4>
-                    <p>Tác giả: Vũ Trọng Phụng</p>
-                    <p>Nhà xuất bản: Nhà Xuất Bản Văn Học</p>
-                    <p>Năm xuất bản: 1936</p>
+                    <h3 id="product-title">Số đỏ - Vũ Trọng Phụng</h3>
+                    <h4 id="product-price">130.000 ₫</h4>
+                    <p id="product-author">Tác giả: Vũ Trọng Phụng</p>
+                    <p id="product-publisher">Nhà xuất bản: Nhà Xuất Bản Văn Học</p>
+                    <p id="product-year">Năm xuất bản: 1936</p>
                     <hr>
                     <div class="mua">
-                        <span id="one"><button>Thêm vào Giỏ Hàng</button></span>
+                        <span id="one"><button class="add-to-cart">Thêm vào Giỏ Hàng</button></span>
                         <span id="two"><button>Mua Ngay</button></span>
                     </div>
                     <div class="box-1">
@@ -75,10 +77,15 @@
             <h4>Mô tả chi tiết
                 <hr>
             </h4>
-            <div class="hd">
-                <p><strong>Số đỏ</strong> là một trong những tác phẩm kinh điển của văn học Việt Nam, được viết bởi Vũ Trọng Phụng vào năm 1936. Tác phẩm châm biếm sâu sắc những thói hư tật xấu của xã hội đương thời thông qua những câu chuyện hài hước nhưng thấm đẫm triết lý.</p>
-                <p>Tác phẩm kể về cuộc đời và những trò lố bịch của Xuân Tóc Đỏ, một nhân vật có xuất thân hèn kém nhưng nhờ sự lưu manh và cơ hội, đã vươn lên trở thành người nổi tiếng trong xã hội thượng lưu.</p>
-                <p>Với ngôn ngữ sắc bén và lối viết châm biếm đặc trưng, "Số đỏ" không chỉ mang lại tiếng cười mà còn làm người đọc phải suy ngẫm về nhiều giá trị xã hội và con người.</p>
+            <div class="hd" id="product-description">
+                <p><strong>Số đỏ</strong> là một trong những tác phẩm kinh điển của văn học Việt Nam, được viết bởi
+                    Vũ Trọng Phụng vào năm 1936. Tác phẩm châm biếm sâu sắc những thói hư tật xấu của xã hội đương
+                    thời thông qua những câu chuyện hài hước nhưng thấm đẫm triết lý.</p>
+                <p>Tác phẩm kể về cuộc đời và những trò lố bịch của Xuân Tóc Đỏ, một nhân vật có xuất thân hèn kém nhưng
+                    nhờ sự lưu manh và cơ hội, đã vươn lên trở thành người nổi tiếng trong xã hội thượng lưu.</p>
+                <p>Với ngôn ngữ sắc bén và lối viết châm biếm đặc trưng, "Số đỏ" không chỉ mang lại tiếng cười mà còn
+                    làm
+                    người đọc phải suy ngẫm về nhiều giá trị xã hội và con người.</p>
             </div>
             <div class="box-2">
                 <h3>BÀI VIẾT LIÊN QUAN</h3>
@@ -96,7 +103,8 @@
                     <div class="item3">
                         <img src="img/event3.jpg" alt="">
                         <div class="name">Ý nghĩa của tác phẩm Số đỏ trong văn học Việt Nam</div>
-                        <p>"Số đỏ" có ý nghĩa vô cùng to lớn đối với nền văn học Việt Nam, đặc biệt trong thể loại...</p>
+                        <p>"Số đỏ" có ý nghĩa vô cùng to lớn đối với nền văn học Việt Nam, đặc biệt trong thể loại...
+                        </p>
                     </div>
                 </div>
             </div>
@@ -105,7 +113,9 @@
             <div class="box">
                 <div class="logo"></div>
                 <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque natus eum id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque natus
+                    eum id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem
+                    consequuntur.</p>
             </div>
             <div class="box">
                 <h3>Liên Hệ Với Shop</h3>
@@ -138,7 +148,6 @@
                 </form>
             </div>
         </div>
-    </div>
 </body>
 
 </html>

@@ -8,15 +8,15 @@
 }
 
 .box-left {
-    margin-top: 30px;
+    width: 30%;
+    float: left;
+    padding-right: 20px; 
 }
 
-.box-left img {
-    width: 700px;
-}
-
-.chitiet .box-left .box-right {
-    width: 50%;
+#product-img {
+    max-width: 100%; 
+    height: auto; 
+    align-items: center;
 }
 
 .chitiet {
@@ -26,21 +26,24 @@
     justify-content: space-between;
 }
 
+.chitiet .box-left,
+.chitiet .box-right {
+    width: 50%;
+}
+
 .box-right {
     margin-top: 30px;
 }
 
 .box-right h3 {
     font-size: 25px;
-    font-weight: 500px;
+    font-weight: 500;
 }
 
 .box-right h4 {
     font-size: 20px;
     color: red;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .size {
@@ -49,7 +52,7 @@
 }
 
 .box-right label {
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 18px;
 }
 
@@ -118,7 +121,6 @@ main h4 {
 
 main h4 hr {
     margin-left: 470px;
-    align-items: center;
     text-align: center;
     width: 300px;
 }
@@ -170,10 +172,24 @@ main h4 hr {
     text-align: center;
 }
 
-.product3 .item3 p:hover {
+.product3 .item3 p:hover,
+.product3 .item3 .name:hover {
     color: red;
 }
 
-.product3 .item3 .name:hover {
-    color: red;
+@keyframes moveToCart {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) translateX(300px);
+        opacity: 0;
+    }
+}
+
+.cart-item-animation {
+    position: absolute;
+    z-index: 9999;
+    animation: moveToCart 1s ease-in-out forwards;
 }
