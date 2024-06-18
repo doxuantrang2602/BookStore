@@ -96,32 +96,94 @@ main .head a {
     background-color: #155dad; 
     border-color: #155dad; 
 }
+.list-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.list-page .item {
+    margin: 0 5px; 
+}
+
+.list-page .item a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.list-page .item a:hover {
+    background-color: #f0f0f0;
+}
 
 .in4nike {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.in4nike h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.in4nike p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+.even2 {
+    text-align: center;
     margin-top: 50px;
 }
 
+.even2 h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
 .event {
-    margin: 20px;
+    margin-bottom: 30px;
     display: flex;
+    align-items: center;
+    background-color: #f9f9f9; /* Màu nền của từng event */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .event img {
     width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
 }
 
 .event a {
-    font-size: 20px;
-    margin-top: 30px;
-    margin-left: 30px;
+    font-size: 18px;
+    color: #333;
     text-decoration: none;
-    color: #111;
-    display: flex;
+    transition: color 0.3s ease;
 }
 
 .event a:hover {
-    color: red;
+    color: #f85c5c; /* Màu khi hover */
 }
+
+.event p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
 
 h2 {
     padding-top: 50px;

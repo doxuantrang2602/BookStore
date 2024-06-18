@@ -9,47 +9,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/nav.css">
     <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <script src="signup.js" defer></script>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <a href="/home/home.html" class="logo">
+            <a href="#" class="logo">
                 <img src="img/lohooo.png" alt="">
+
             </a>
 
-            <nav class="topnav" id="myTopnav">
-                <div class="item">
-                    <a href="">Trang chủ</a>
-                </div>
-                <div class="item">
-                    <a href="">Sản phẩm</a>
-                </div>
-                <div class="item">
-                    <a href="">Deal Sốc</a>
-                </div>
-                <div class="item">
-                    <a href="">Liên hệ</a>
-                </div>
-                <div class="item">
-                    <a href="">Dịch vụ</a>
-                </div>
+            <nav>
+                <label for="togge-menu" class="btn-menu">
+                    <i class="fas fa-bars"></i> </label>
+                <input type="checkbox" id="togge-menu">
+                <ul class="menu">
+                    <li><a href="/home/home.html">Trang chủ</a></li>
+                    <li><a href="/literarybooks/product.html">Sách Văn Học</a></li>
+                    <li><a href="#">Deal Sốc</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Dịch vụ</a></li>
+                </ul>
             </nav>
             <div class="acctions">
                 <div class="item">
-                    <a href="dangky.html"><img src="img/user.png" alt=""></a>
+                    <a href="/signup/signup.html"><img src="img/user.png" alt=""></a>
                 </div>
                 <div class="item">
                     <a href="#"><img src="img/cart.png" alt=""></a>
                 </div>
+
             </div>
-            <label for="check" id="icon">
-                <i class="fas fa-bars"></i>
-            </label>
-            <input type="checkbox" name="" id="check">
+
         </header>
         <form action="#" name="register" method="GET" onsubmit="return formRegister();" class="col-6 mx-auto border border-primary">
             <h4 class="m-0 p-2 text-center">ĐĂNG KÝ THÀNH VIÊN</h4>
@@ -107,8 +103,8 @@
             <div id="message"></div>
             <div class="form-group">
                 <input id="btn_dangKy" type="submit" name="submit" class="btn btn-primary m-auto col-5" value="Đăng ký">
-                <input id="btn_dangNhap" type="submit" name="submit" class="btn btn-primary m-auto col-5" value="Đăng nhập thôi !">
-            </div>
+                <input id="btn_dangNhap" type="submit" name="submit" class="btn btn-primary m-auto col-5" value="Đăng nhập thôi !" onclick="window.location.href='home.html';">
+            </div>            
             <div id="registerInfor"></div>
             <div id="kq2"></div>
         </form>

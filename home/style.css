@@ -50,11 +50,12 @@ main h2 {
 
 #product .item {
     width: 250px;
-    background-color: #1d1d1d;
+    background-color: #f0f0f0;
     margin-bottom: 30px;
     border-radius: 5px;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #product .item:hover {
@@ -70,14 +71,14 @@ main h2 {
 
 #product .item .name {
     text-align: center;
-    color: white;
+    color: #333;
     font-size: 20px;
     margin: 15px 0;
 }
 
 #product .item .price {
     text-align: center;
-    color: red;
+    color: #e60023;
     font-size: 22px;
 }
 
@@ -86,17 +87,19 @@ main h2 {
     padding: 10px 20px;
     margin: 15px auto 0;
     text-align: center;
-    color: red;
-    border: solid 1px black;
-    background-color: aqua;
+    color: white;
+    border: none;
+    background-color: #ff6347;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 #product .item .buy:hover {
-    background-color: rgb(155, 182, 182);
+    background-color: #ff4500;
     color: white;
 }
+
 
 .list-page {
     display: flex;

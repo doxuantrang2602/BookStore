@@ -90,5 +90,5 @@ function formRegister() {
     return false;
 }
 document.getElementById("btn_dangNhap").addEventListener("click", function() {
-    window.location.href = "index.html"; 
+    window.location.href = "/home/home.html"; 
 });
