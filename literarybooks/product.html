@@ -28,8 +28,8 @@
                 <ul class="menu">
                     <li><a href="/home/home.html">Trang chủ</a></li>
                     <li><a href="/literarybooks/product.html">Sách Văn Học</a></li>
-                    <li><a href="#">Deal Sốc</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#" onclick="scrollToProfile()">Về chúng tôi</a></li>
+                    <li><a href="#" onclick="scrollToContact()">Liên hệ</a></li>
                     <li><a href="#">Dịch vụ</a></li>
                 </ul>
             </nav>
@@ -38,10 +38,11 @@
                     <a href="/signup/signup.html"><img src="img/user.png" alt=""></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/cart.png" alt=""></a>
+                    <a href="/shoppingcart/shoppingcart.html"><img src="img/cart.png" alt=""></a>
                 </div>
 
             </div>
+
         </header>
         <main>
             <h1>Sách Văn Học</h1>
@@ -161,6 +162,22 @@
                     Tầm quan trọng của việc đọc sách
                     </a>
             </div>
+            <div class="profile" id="profile">
+                <div class="box-left">
+                    <h4>Về chúng tôi</h4>
+                    <h3>ShopSachHay.com™</h3>
+                    <p>Uy tín lâu năm chuyên cung cấp sách hay, chất lượng đảm bảo và giá tốt nhất. Shop có sẵn hàng
+                        tại 2 cơ sở Hà Nội, tp HCM</p>
+                    <br>
+                    <p>Bạn đang cần tìm một cuốn sách hay và hợp thời trang và đang hot Trends đến từ các tác giả
+                        lớn nhưng lại không đủ hầu bao để sắm được hàng chính hãng? Hãy đến với ShopSachHay.com –
+                        nơi bạn thỏa lòng mong ước mà chỉ phải chi ra 1 phần nhỏ so với dòng chính hãng ngoài store
+                        mà vẫn sắm cho mình được một cuốn sách chất lượng.</p>
+                </div>
+                <div class="box-right">
+                    <img src="img/sp2.jpg" alt="">
+                </div>
+            </div>
         </main>
         <div id="footer">
             <div class="box">
@@ -201,8 +218,21 @@
                     <button>Nhận tư vấn</button>
                 </form>
             </div>
+            <a href="#" class="scroll-to-top" onclick="smoothScrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </a>
         </div>
     </div>
+    <script>
+        function scrollToProfile() {
+            var element = document.getElementById("profile");
+            element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        }
+        function scrollToContact() {
+            var element = document.getElementById("footer");
+            element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        }
+    </script>
     </div>
 </body>
 

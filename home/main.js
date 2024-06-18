@@ -34,11 +34,5 @@ function last() {
 }
 setInterval("next()", 3000);
 
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+
+

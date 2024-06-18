@@ -183,8 +183,60 @@ main .head a {
     margin-top: 10px;
     line-height: 1.6;
 }
-
-
 h2 {
     padding-top: 50px;
+}
+
+.profile {
+    margin-top: 100px;
+    display: flex;
+}
+
+.profile .box-left,
+.profile .box-right {
+    width: 50%;
+}
+
+.profile .box-left {
+    text-align: center;
+}
+
+.box-left h4 {
+    color: orange;
+    font-size: 20px;
+}
+
+.profile .box-left h3 {
+    font-size: 35px;
+}
+
+.profile.box-right img {
+    width: 100%;
+}
+
+
+@keyframes scroll-up {
+    0% { opacity: 1; }
+    100% { transform: translateY(-100%); opacity: 0; }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
 }

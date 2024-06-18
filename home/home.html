@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="/nav.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="main.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -18,7 +22,6 @@
         <header>
             <a href="#" class="logo">
                 <img src="img/lohooo.png" alt="">
-
             </a>
 
             <nav>
@@ -28,8 +31,8 @@
                 <ul class="menu">
                     <li><a href="/home/home.html">Trang chủ</a></li>
                     <li><a href="/literarybooks/product.html">Sách Văn Học</a></li>
-                    <li><a href="#">Deal Sốc</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#" onclick="scrollToProfile()">Về chúng tôi</a></li>
+                    <li><a href="#" onclick="scrollToContact()">Liên hệ</a></li>
                     <li><a href="#">Dịch vụ</a></li>
                 </ul>
             </nav>
@@ -52,7 +55,6 @@
                     <i class="fa fa-chevron-circle-right" onclick="next();"></i>
                 </div>
             </div>
-            <script src="main.js"></script>
             <main>
                 <h2>SẢN PHẨM BÁN CHẠY</h2>
                 <div id="product">
@@ -122,14 +124,17 @@
                         <a href="">4</a>
                     </div>
                 </div>
-                <div class="profile">
-
-
+                <div class="profile" id="profile">
                     <div class="box-left">
                         <h4>Về chúng tôi</h4>
                         <h3>ShopSachHay.com™</h3>
-                        <p>Uy tín lâu năm chuyên cung cấp sách hay, chất lượng đảm bảo và giá tốt nhất. Shop có sẵn hàng tại 2 cơ sở Hà Nội, tp HCM</p> <br>
-                        <p>Bạn đang cần tìm một cuốn sách hay và hợp thời trang và đang hot Trends đến từ các tác giả lớn nhưng lại không đủ hầu bao để sắm được hàng chính hãng? Hãy đến với ShopSachHay.com – nơi bạn thỏa lòng mong ước mà chỉ phải chi ra 1 phần nhỏ so với dòng chính hãng ngoài store mà vẫn sắm cho mình được một cuốn sách chất lượng.</p>
+                        <p>Uy tín lâu năm chuyên cung cấp sách hay, chất lượng đảm bảo và giá tốt nhất. Shop có sẵn hàng
+                            tại 2 cơ sở Hà Nội, tp HCM</p>
+                        <br>
+                        <p>Bạn đang cần tìm một cuốn sách hay và hợp thời trang và đang hot Trends đến từ các tác giả
+                            lớn nhưng lại không đủ hầu bao để sắm được hàng chính hãng? Hãy đến với ShopSachHay.com –
+                            nơi bạn thỏa lòng mong ước mà chỉ phải chi ra 1 phần nhỏ so với dòng chính hãng ngoài store
+                            mà vẫn sắm cho mình được một cuốn sách chất lượng.</p>
                     </div>
                     <div class="box-right">
                         <img src="img/sp2.jpg" alt="">
@@ -140,10 +145,13 @@
             <div id="footer">
                 <div class="box">
                     <div class="logo">
-
                     </div>
                     <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque natus eum id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem consequuntur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque
+                        natus eum
+                        id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem
+                        consequuntur.
+                    </p>
                 </div>
                 <div class="box">
                     <h3>Liên Hệ Với Shop</h3>
@@ -172,13 +180,24 @@
                         <input type="text" placeholder="Tên">
                         <input type="text" placeholder="Địa chỉ email">
                         <input type="number" placeholder="Số điện thoại">
-
                         <button>Nhận tư vấn</button>
                     </form>
                 </div>
+                <a href="#" class="scroll-to-top" onclick="smoothScrollToTop()">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
         </div>
+        <script>
+            function scrollToProfile() {
+                var element = document.getElementById("profile");
+                element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            }
+            function scrollToContact() {
+                var element = document.getElementById("footer");
+                element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            }
+        </script>
     </div>
 </body>
-
 </html>

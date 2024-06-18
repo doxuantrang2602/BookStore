@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web bán sách</title>
+    <title>Giỏ hàng</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/nav.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="shoppingcart.js" defer></script>
 </head>
 
 <body>
@@ -18,9 +21,7 @@
         <header>
             <a href="#" class="logo">
                 <img src="img/lohooo.png" alt="">
-
             </a>
-
             <nav>
                 <label for="togge-menu" class="btn-menu">
                     <i class="fas fa-bars"></i> </label>
@@ -38,12 +39,80 @@
                     <a href="/signup/signup.html"><img src="img/user.png" alt=""></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/cart.png" alt=""></a>
+                    <a href="/shoppingcart/shoppingcart.html"><img src="img/cart.png" alt=""></a>
                 </div>
-
             </div>
-
         </header>
+        <main>
+            <section class="cart">
+                <h1>Giỏ hàng của bạn</h1>
+                <div class="cart-items">
+                    <div class="cart-item" data-price="120000">
+                        <img src="img/book_1.jpg" alt="Book 1">
+                        <div class="item-details">
+                            <h3>Tiếng Gọi Của Hoang Dã - Jack London</h3>
+                            <p>Đơn giá: 120,000 VNĐ</p>
+                            <p>Số lượng: <span class="quantity">1</span></p>
+                            <button class="btn-remove">Xóa</button>
+                        </div>
+                    </div>
+                    <div class="cart-item" data-price="150000">
+                        <img src="img/book_2.jpg" alt="Book 2">
+                        <div class="item-details">
+                            <h3>Đắc Nhân Tâm - Dale Carnegie</h3>
+                            <p>Đơn giá: 150,000 VNĐ</p>
+                            <p>Số lượng: <span class="quantity">2</span></p>
+                            <button class="btn-remove">Xóa</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h2>Tổng tiền</h2>
+                    <p>Tạm tính: <span class="subtotal">420,000</span> VNĐ</p>
+                    <button class="btn-checkout">Thanh toán</button>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer">
+            <div class="box">
+                <div class="logo">
+
+                </div>
+                <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque natus eum id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem consequuntur.</p>
+            </div>
+            <div class="box">
+                <h3>Liên Hệ Với Shop</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Hướng dẫn đặt hàng</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Điều Khoản và Điều Kiện Thanh Toán</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Chính sách giao hàng và nhận hàng</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Liên hệ</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Đổi Trả – Bảo Hành</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder="Họ">
+                    <input type="text" placeholder="Tên">
+                    <input type="text" placeholder="Địa chỉ email">
+                    <input type="number" placeholder="Số điện thoại">
+                    <button>Nhận tư vấn</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 
