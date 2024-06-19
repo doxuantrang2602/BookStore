@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài viết</title>
+    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">
+                <img src="img/lohooo.png" alt="Logo">
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li><a href="/home/home.html">Trang chủ</a></li>
+                    <li><a href="/literarybooks/product.html">Sách Văn Học</a></li>
+                    <li><a href="/home/home.html">Về chúng tôi</a></li>
+                    <li><a href="#" onclick="scrollToContact()">Liên hệ</a></li>
+                    <li><a href="/home/home.html">Dịch vụ</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <div class="item">
+                    <a href="/signup/signup.html"><img src="img/user.png" alt="Người dùng"></a>
+                </div>
+                <div class="item">
+                    <a href="/shoppingcart/shoppingcart.html"><img src="img/cart.png" alt="Giỏ hàng"></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <h1>Lợi ích của việc đọc sách</h1>
+                <div class="metadata">
+                    <span>Ngày đăng: 19/06/2024</span>
+                    <span>Tác giả: Đại học Quốc gia Hà Nội</span>
+                </div>
+                <img src="img/event4.jpg" width="400px" alt="Hình ảnh bài viết">
+                <p>Đọc sách không chỉ là một thú vui mà còn mang lại nhiều lợi ích to lớn cho mỗi người chúng ta. Dưới đây là một số lợi ích quan trọng mà việc đọc sách mang lại:</p>
+                <ul>
+                    <li><strong>Nâng cao tri thức:</strong> Đọc sách giúp mở rộng kiến thức và hiểu biết về nhiều lĩnh vực khác nhau.</li>
+                    <li><strong>Phát triển tư duy:</strong> Sách giúp rèn luyện tư duy logic và sáng tạo, khả năng phân tích và suy luận.</li>
+                    <li><strong>Nâng cao khả năng giao tiếp:</strong> Từ việc đọc sách, bạn có thêm chủ đề để trao đổi và làm giàu từ vựng, cải thiện kỹ năng giao tiếp.</li>
+                    <li><strong>Giảm căng thẳng:</strong> Đọc sách là cách tuyệt vời để giảm stress và thư giãn sau một ngày làm việc căng thẳng.</li>
+                    <li><strong>Giúp phát triển cá nhân:</strong> Sách cung cấp cho bạn những bài học quý giá về cuộc sống và con người.</li>
+                </ul>
+                <p>Đừng ngần ngại dành thời gian hàng ngày để đọc sách và khám phá thế giới tri thức bao la mà sách mang lại!</p>
+            </article>
+
+            <div class="comments">
+                <h2>Bình luận</h2>
+                <form id="commentForm">
+                    <input type="text" id="name" placeholder="Tên của bạn">
+                    <textarea id="comment" placeholder="Bình luận của bạn"></textarea>
+                    <button type="button" onclick="submitComment()">Gửi bình luận</button>
+                </form>
+                <div id="commentSection">
+                    
+                </div>
+            </div>
+        </main>
+
+        <div id="footer">
+            <div class="box">
+                <div class="logo">
+
+                </div>
+                <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque natus eum id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem consequuntur.</p>
+            </div>
+            <div class="box">
+                <h3>Liên Hệ Với Shop</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Hướng dẫn đặt hàng</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Điều Khoản và Điều Kiện Thanh Toán</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Chính sách giao hàng và nhận hàng</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Liên hệ</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Đổi Trả – Bảo Hành</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder="Họ">
+                    <input type="text" placeholder="Tên">
+                    <input type="text" placeholder="Địa chỉ email">
+                    <input type="number" placeholder="Số điện thoại">
+
+                    <button>Nhận tư vấn</button>
+                </form>
+            </div>
+            <a href="#" class="scroll-to-top" onclick="smoothScrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </div>
+    <script src="article.js"></script>
+    <script>
+        function scrollToProfile() {
+            var element = document.getElementById("profile");
+            element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        }
+        function scrollToContact() {
+            var element = document.getElementById("footer");
+            element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        }
+    </script>
+</body>
+
+</html>

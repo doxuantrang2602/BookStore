@@ -43,15 +43,15 @@ nav ul li a {
     font-size: 25px;
 }
 
-.acctions {
+.actions {
     display: flex;
 }
 
-.acctions .item {
+.actions .item {
     margin: 0 20px;
 }
 
-.acctions .item a img {
+.actions .item a img {
     width: 30px;
 }
 
@@ -59,7 +59,7 @@ nav ul li a {
     display: none;
 }
 
-.acctions input {
+.actions input {
     display: none;
 }
 

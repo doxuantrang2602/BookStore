@@ -25,27 +25,26 @@
             </a>
 
             <nav>
-                <label for="togge-menu" class="btn-menu">
-                    <i class="fas fa-bars"></i> </label>
-                <input type="checkbox" id="togge-menu">
+                <label for="toggle-menu" class="btn-menu">
+                    <i class="fas fa-bars"></i>
+                </label>
                 <ul class="menu">
                     <li><a href="/home/home.html">Trang chủ</a></li>
                     <li><a href="/literarybooks/product.html">Sách Văn Học</a></li>
                     <li><a href="#" onclick="scrollToProfile()">Về chúng tôi</a></li>
                     <li><a href="#" onclick="scrollToContact()">Liên hệ</a></li>
-                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="#" onclick="scrollToServices()">Dịch vụ</a></li>
+                    <li><a href="/article/article.html">Bài viết</a></li>
                 </ul>
             </nav>
-            <div class="acctions">
+            <div class="actions">
                 <div class="item">
                     <a href="/signup/signup.html"><img src="img/user.png" alt=""></a>
                 </div>
                 <div class="item">
                     <a href="/shoppingcart/shoppingcart.html"><img src="img/cart.png" alt=""></a>
                 </div>
-
             </div>
-
         </header>
         <div id="banner">
             <div class="box">
@@ -61,25 +60,25 @@
                     <div class="item">
                         <img src="img/product_7.jpg" alt="">
                         <div class="name">Giải tích 1</div>
-                        <div class="pirce">100.000 VNĐ</div>
+                        <div class="price">100.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                     <div class="item">
                         <img src="img/product_8.jpg" alt="">
                         <div class="name">Toán cao cấp</div>
-                        <div class="pirce">200.000 VNĐ</div>
+                        <div class="price">200.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                     <div class="item">
                         <img src="img/product_9.jpg" alt="">
                         <div class="name">Toán rời rạc</div>
-                        <div class="pirce">150.000 VNĐ</div>
+                        <div class="price">150.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                     <div class="item">
                         <img src="img/product_10.jpg" alt="">
                         <div class="name">Thiết kế Web</div>
-                        <div class="pirce">175.000 VNĐ</div>
+                        <div class="price">175.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                 </div>
@@ -88,25 +87,25 @@
                     <div class="item">
                         <img src="img/product_11.jpg" alt="">
                         <div class="name">Lập trình C++</div>
-                        <div class="pirce">100.000 VNĐ</div>
+                        <div class="price">100.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                     <div class="item">
                         <img src="img/product_12.jpg" alt="">
                         <div class="name">Lịch sử đảng</div>
-                        <div class="pirce">200.000 VNĐ</div>
+                        <div class="price">200.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                     <div class="item">
                         <img src="img/product_13.jpg" alt="">
                         <div class="name">Quốc phòng an ninh</div>
-                        <div class="pirce">150.000 VNĐ</div>
+                        <div class="price">150.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                     <div class="item">
                         <img src="img/product_14.jpg" alt="">
                         <div class="name">Vật lý đại cương</div>
-                        <div class="pirce">175.000 VNĐ</div>
+                        <div class="price">175.000 VNĐ</div>
                         <div class="buy">Mua Ngay</div>
                     </div>
                 </div>
@@ -124,6 +123,26 @@
                         <a href="">4</a>
                     </div>
                 </div>
+                <section class="services" id="services">
+                    <h2>Dịch Vụ</h2>
+                    <div class="container">
+                        <div class="service-item">
+                            <h3>Dịch vụ 1</h3>
+                            <p>Phương thức thanh toán đa dạng</p>
+                            <a href="#" class="btn">Chi tiết</a>
+                        </div>
+                        <div class="service-item">
+                            <h3>Dịch vụ 2</h3>
+                            <p>Dịch vụ đa dạng</p>
+                            <a href="#" class="btn">Chi tiết</a>
+                        </div>
+                        <div class="service-item">
+                            <h3>Dịch vụ 3</h3>
+                            <p>Có mặt khắp cả nước</p>
+                            <a href="#" class="btn">Chi tiết</a>
+                        </div>
+                    </div>
+                </section>
                 <div class="profile" id="profile">
                     <div class="box-left">
                         <h4>Về chúng tôi</h4>
@@ -195,6 +214,10 @@
             }
             function scrollToContact() {
                 var element = document.getElementById("footer");
+                element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            }
+            function scrollToServices() {
+                var element = document.getElementById("services");
                 element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
             }
         </script>
