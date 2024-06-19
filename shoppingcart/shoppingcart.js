@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const btnMinus = cartItem.querySelector('.btn-minus');
         const btnRemove = cartItem.querySelector('.btn-remove');
 
-        // Xử lý sự kiện khi nhấn nút +
+        // Nút +
         btnPlus.addEventListener('click', function() {
             let quantity = parseInt(quantityElement.textContent);
             quantity++;
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateSubtotal();
         });
 
-        // Xử lý sự kiện khi nhấn nút -
+        // Nút -
         btnMinus.addEventListener('click', function() {
             let quantity = parseInt(quantityElement.textContent);
             if (quantity > 1) {
