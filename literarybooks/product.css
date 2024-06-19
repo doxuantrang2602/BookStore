@@ -49,9 +49,9 @@ main .head a {
     width: 250px;
     height: auto;
     border-radius: 5px;
-    background-color: #ffffff; /* Nền trắng cho sản phẩm */
+    background-color: #ffffff; 
     margin-bottom: 30px;
-    border: solid 1px #cccccc; /* Viền màu xám */
+    border: solid 1px #cccccc; 
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
@@ -153,7 +153,7 @@ main .head a {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    background-color: #f9f9f9; /* Màu nền của từng event */
+    background-color: #f9f9f9;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -174,7 +174,7 @@ main .head a {
 }
 
 .event a:hover {
-    color: #f85c5c; /* Màu khi hover */
+    color: #f85c5c; 
 }
 
 .event p {
