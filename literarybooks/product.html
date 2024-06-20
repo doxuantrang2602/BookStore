@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="product.js" defer></script>
 </head>
@@ -34,6 +35,9 @@
                     <li><a href="/article/article.html">Bài viết</a></li>
                 </ul>
             </nav>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sách...">
+            </div>
             <div class="actions">
                 <div class="item">
                     <a href="/signup/signup.html"><img src="img/user.png" alt=""></a>
@@ -45,10 +49,9 @@
         </header>
         <main>
             <h1>Sách Văn Học</h1>
+
             <div class="head">
-                <a href="/home/home.html"> <i class="fa-solid fa-house-chimney">
-            </i> Trang Chủ
-                </a>
+                <a href="/home/home.html"> <i class="fa-solid fa-house-chimney"></i> Trang Chủ</a>
                 <div class="chon">
                     <form action="">
                         <label for="">Chọn lọc:</label>
@@ -59,53 +62,74 @@
                         </select>
                     </form>
                 </div>
+                <div class="price-range">
+                    <input type="number" id="minPrice" placeholder="Giá tối thiểu" min="0">
+                    <input type="number" id="maxPrice" placeholder="Giá tối đa" min="0">
+                    <button onclick="searchBookByPrice()"><i class="fas fa-search"></i></button>
+                </div>
             </div>
 
-            <div class="product2">
+            <div class="product2" id="product">
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Tiếng%20Gọi%20Của%20Hoang%20Dã&author=Jack%20London&price=120000&img=book_1.jpg"><img src="img/book_1.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Tiếng%20Gọi%20Của%20Hoang%20Dã&author=Jack%20London&price=120000&img=book_1.jpg"><img
+                            src="img/book_1.jpg" alt=""></a>
                     <div class="name">Tiếng Gọi Của Hoang Dã - Jack London</div>
                     <div class="pirce">120.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
                 </div>
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Đắc%20Nhân%20Tâm&author=Dale%20Carnegie&price=150000&img=book_2.jpg"><img src="img/book_2.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Đắc%20Nhân%20Tâm&author=Dale%20Carnegie&price=150000&img=book_2.jpg"><img
+                            src="img/book_2.jpg" alt=""></a>
                     <div class="name">Đắc Nhân Tâm - Dale Carnegie</div>
                     <div class="pirce">150.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
                 </div>
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Số%20đỏ&author=Vũ%20Trọng%20Phụng&price=130000&img=book_3.jpg"><img src="img/book_3.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Số%20đỏ&author=Vũ%20Trọng%20Phụng&price=130000&img=book_3.jpg"><img
+                            src="img/book_3.jpg" alt=""></a>
                     <div class="name">Số đỏ (1936)- Vũ Trọng Phụng</div>
                     <div class="pirce">130.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
                 </div>
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Anna%20Karenina&author=Lev%20Tolstoy&price=180000&img=book_4.jpg"><img src="img/book_4.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Anna%20Karenina&author=Lev%20Tolstoy&price=180000&img=book_4.jpg"><img
+                            src="img/book_4.jpg" alt=""></a>
                     <div class="name">Anna Karenina - Lev Tolstoy</div>
                     <div class="pirce">180.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
                 </div>
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Harry%20Potter%20và%20Hòn%20Đá%20Phù%20Thủy&author=J.K.%20Rowling&price=200000&img=book_5.jpg"><img src="img/book_5.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Harry%20Potter%20và%20Hòn%20Đá%20Phù%20Thủy&author=J.K.%20Rowling&price=200000&img=book_5.jpg"><img
+                            src="img/book_5.jpg" alt=""></a>
                     <div class="name">Harry Potter và Hòn Đá Phù Thủy</div>
                     <div class="pirce">200.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
                 </div>
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Harry%20Potter%20và%20Bảo%20Bối%20Tử%20Thần&author=J.K.%20Rowling&price=140000&img=book_6.jpg"><img src="img/book_6.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Harry%20Potter%20và%20Bảo%20Bối%20Tử%20Thần&author=J.K.%20Rowling&price=140000&img=book_6.jpg"><img
+                            src="img/book_6.jpg" alt=""></a>
                     <div class="name">Harry Potter và Bảo Bối Tử Thần</div>
                     <div class="pirce">140.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
                 </div>
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Nhà%20Giả%20Kim&author=Paulo%20Coelho&price=160000&img=book_7.jpg"><img src="img/book_7.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Nhà%20Giả%20Kim&author=Paulo%20Coelho&price=160000&img=book_7.jpg"><img
+                            src="img/book_7.jpg" alt=""></a>
                     <div class="name">Nhà Giả Kim - Paulo Coelho</div>
                     <div class="pirce">160.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
                 </div>
                 <div class="item2">
-                    <a href="/literarybooks/productdetail.html?name=Tôi%20Là%20Bêtô&author=Nguyễn%20Nhật%20Ánh&price=110000&img=book_8.jpg"><img src="img/book_8.jpg" alt=""></a>
+                    <a
+                        href="/literarybooks/productdetail.html?name=Tôi%20Là%20Bêtô&author=Nguyễn%20Nhật%20Ánh&price=110000&img=book_8.jpg"><img
+                            src="img/book_8.jpg" alt=""></a>
                     <div class="name">Tôi Là Bêtô - Nguyễn Nhật Ánh</div>
                     <div class="pirce">110.000 VNĐ</div>
                     <div class="buy">Mua Ngay</div>
@@ -133,8 +157,10 @@
             </div>
             <div class="in4nike">
                 <h3>Sách Văn Học Phổ Biến</h3>
-                <p>Shop sách phong phú với các tựa sách nổi tiếng từ các tác giả hàng đầu thế giới. Với cam kết mang đến cho bạn những cuốn sách chất lượng nhất với mức giá hợp lý.</p> <br>
-                <p>Hãy khám phá ngay các tác phẩm văn học được yêu thích và lựa chọn cho mình những cuốn sách phù hợp với sở thích và nhu cầu của bạn.</p>
+                <p>Shop sách phong phú với các tựa sách nổi tiếng từ các tác giả hàng đầu thế giới. Với cam kết mang đến
+                    cho bạn những cuốn sách có giá trị, shop sách của chúng tôi là địa chỉ tin cậy để bạn khám phá ngay
+                    các tác phẩm văn học được yêu thích và lựa chọn cho mình những cuốn sách phù hợp với sở thích và nhu
+                    cầu của bạn.</p>
             </div>
             <div class="even2">
                 <h2>Bài Viết Nổi Bậc</h2>
@@ -159,15 +185,19 @@
                 <img src="img/event5.jpg" alt="">
                 <a href="">
                     Tầm quan trọng của việc đọc sách
-                    </a>
+                </a>
             </div>
             <div class="profile" id="profile">
                 <div class="box-left">
                     <h4>Về chúng tôi</h4>
                     <h3>ShopSachHay.com™</h3>
-                    <p>Uy tín lâu năm chuyên cung cấp sách hay, chất lượng đảm bảo và giá tốt nhất. Shop có sẵn hàng tại 2 cơ sở Hà Nội, tp HCM</p>
+                    <p>Uy tín lâu năm chuyên cung cấp sách hay, chất lượng đảm bảo và giá tốt nhất. Shop có sẵn hàng tại
+                        2 cơ sở Hà Nội, tp HCM</p>
                     <br>
-                    <p>Bạn đang cần tìm một cuốn sách hay và hợp thời trang và đang hot Trends đến từ các tác giả lớn nhưng lại không đủ hầu bao để sắm được hàng chính hãng? Hãy đến với ShopSachHay.com – nơi bạn thỏa lòng mong ước mà chỉ phải chi ra 1 phần nhỏ so với dòng chính hãng ngoài store mà vẫn sắm cho mình được một cuốn sách chất lượng.</p>
+                    <p>Bạn đang cần tìm một cuốn sách hay và hợp thời trang và đang hot Trends đến từ các tác giả lớn
+                        nhưng lại không đủ hầu bao để sắm được hàng chính hãng? Hãy đến với ShopSachHay.com – nơi bạn
+                        thỏa lòng mong ước mà chỉ phải chi ra 1 phần nhỏ so với dòng chính hãng ngoài store mà vẫn sắm
+                        cho mình được một cuốn sách chất lượng.</p>
                 </div>
                 <div class="box-right">
                     <img src="img/sp2.jpg" alt="">
@@ -180,7 +210,9 @@
 
                 </div>
                 <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque natus eum id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste, quasi quod temporibus cumque natus
+                    eum id harum, placeat vitae quis deserunt eveniet. Recusandae quis, blanditiis vel explicabo rem
+                    consequuntur.</p>
             </div>
             <div class="box">
                 <h3>Liên Hệ Với Shop</h3>
@@ -227,6 +259,45 @@
             var element = document.getElementById("footer");
             element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
         }
+
+        function searchBooks() {
+            var input, filter, product, items, name, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            product = document.getElementById("product");
+            items = product.getElementsByClassName('item2');
+
+            for (i = 0; i < items.length; i++) {
+                name = items[i].getElementsByClassName("name")[0];
+                txtValue = name.textContent || name.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+        document.getElementById('searchInput').addEventListener('input', searchBooks);
+
+        function searchBookByPrice() {
+            var minPrice = parseFloat(document.getElementById('minPrice').value);
+            var maxPrice = parseFloat(document.getElementById('maxPrice').value);
+            var product = document.getElementById("product");
+            var items = product.getElementsByClassName('item2');
+
+            for (var i = 0; i < items.length; i++) {
+                var priceElement = items[i].getElementsByClassName("pirce")[0];
+                if (priceElement) {
+                    var price = parseFloat(priceElement.textContent.replace(/[^\d.-]/g, ''));
+                    if ((isNaN(minPrice) || price >= minPrice) && (isNaN(maxPrice) || price <= maxPrice)) {
+                        items[i].style.display = "";
+                    } else {
+                        items[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
     </script>
 </body>
 
